@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.adxcorp.ads.nativeads.AdxNativeAdFactory
@@ -15,8 +14,10 @@ import com.adxcorp.ads.nativeads.event.NativeAdLoadedListener
 import com.adxcorp.ads.nativeads.position.NativeAdPosition
 import java.util.*
 
-class NativeAdRecyclerViewActivity : AppCompatActivity() {
-
+class NativeAdRecyclerViewActivity : BaseActivity(
+    R.layout.activity_native_ad_recyclerview,
+    R.id.content_main
+) {
     companion object {
         private val TAG = "ADX:" + NativeAdRecyclerViewActivity::class.java.simpleName
     }
@@ -28,7 +29,6 @@ class NativeAdRecyclerViewActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_native_ad_recyclerview)
 
         mAdxUnitId = getString(R.string.native_unit_id)
         for (i in 0..149) {

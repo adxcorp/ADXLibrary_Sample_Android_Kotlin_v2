@@ -4,10 +4,12 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.LinearLayout
-import androidx.appcompat.app.AppCompatActivity
 import com.adxcorp.ads.nativeads.*
 
-class NativeAdFactoryActivity : AppCompatActivity() {
+class NativeAdFactoryActivity : BaseActivity(
+    R.layout.activity_native_ad_factory,
+    R.id.content_main
+) {
 
     companion object {
         private val TAG = "ADX:" + NativeAdFactoryActivity::class.java.simpleName
@@ -47,7 +49,6 @@ class NativeAdFactoryActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_native_ad_factory)
 
         mContentView = findViewById(R.id.content_main)
         mAdxUnitId = getString(R.string.native_unit_id)

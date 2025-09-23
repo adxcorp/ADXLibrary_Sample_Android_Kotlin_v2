@@ -4,10 +4,12 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import com.adxcorp.ads.InterstitialAd
 
-class InterstitialActivity : AppCompatActivity() {
+class InterstitialActivity : BaseActivity(
+    R.layout.activity_fullscreen,
+    R.id.cl_content
+) {
 
     companion object {
         private val TAG = "ADX:" + InterstitialActivity::class.java.simpleName
@@ -17,7 +19,6 @@ class InterstitialActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_fullscreen)
 
         val button = findViewById<Button>(R.id.button)
         button.setOnClickListener {

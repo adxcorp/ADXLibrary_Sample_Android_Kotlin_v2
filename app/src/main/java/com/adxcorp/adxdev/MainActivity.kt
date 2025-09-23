@@ -7,17 +7,18 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
 import com.adxcorp.ads.ADXConfiguration
 import com.adxcorp.ads.ADXSdk
 import com.adxcorp.ads.nativeads.AdxNativeAdFactory
 import com.adxcorp.ads.nativeads.AdxViewBinder
 import com.adxcorp.util.ADXLogUtil
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity(
+    R.layout.activity_main,
+    R.id.cl_main
+) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
         // ADX 로그 활성화
         ADXLogUtil.setLogEnable(true)
