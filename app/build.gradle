@@ -4,16 +4,16 @@ plugins {
 }
 
 // AD(X) SDK Version
-def adxSdkVersion = '2.3.5'
+def adxSdkVersion = '2.8.0'
 
 android {
     namespace 'com.adxcorp.adxdev'
-    compileSdk 33
+    compileSdk 35
 
     defaultConfig {
         applicationId "com.adxcorp.adxdev"
-        minSdk 19
-        targetSdk 33
+        minSdk 23
+        targetSdk 35
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
