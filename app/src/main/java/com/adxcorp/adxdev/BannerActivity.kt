@@ -1,13 +1,14 @@
 package com.adxcorp.adxdev
 
-import androidx.appcompat.app.AppCompatActivity
 import com.adxcorp.ads.BannerAd
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 
-class BannerActivity : AppCompatActivity() {
-
+class BannerActivity : BaseActivity(
+    R.layout.activity_banner,
+    R.id.cl_banner
+) {
     companion object {
         private val TAG = "ADX:" + BannerActivity::class.java.simpleName
     }
@@ -16,7 +17,6 @@ class BannerActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_banner)
 
         bannerAd = findViewById(R.id.banner)
         bannerAd?.setBannerListener(object : BannerAd.BannerListener {

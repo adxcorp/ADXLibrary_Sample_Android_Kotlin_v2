@@ -4,11 +4,12 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import com.adxcorp.ads.RewardedAd
 
-class RewardedAdActivity : AppCompatActivity() {
-
+class RewardedAdActivity : BaseActivity(
+    R.layout.activity_fullscreen,
+    R.id.cl_content
+) {
     companion object {
         private val TAG = "ADX:" + RewardedAdActivity::class.java.simpleName
     }
@@ -17,7 +18,6 @@ class RewardedAdActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_fullscreen)
 
         val button = findViewById<Button>(R.id.button)
         button.setOnClickListener {
