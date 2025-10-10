@@ -13,10 +13,7 @@ import com.adxcorp.ads.nativeads.AdxNativeAdFactory
 import com.adxcorp.ads.nativeads.AdxViewBinder
 import com.adxcorp.util.ADXLogUtil
 
-class MainActivity : BaseActivity(
-    R.layout.activity_main,
-    R.id.cl_main
-) {
+class MainActivity : BaseActivity(R.layout.activity_main) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

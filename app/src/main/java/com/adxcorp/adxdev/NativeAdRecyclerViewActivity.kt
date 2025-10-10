@@ -14,10 +14,7 @@ import com.adxcorp.ads.nativeads.event.NativeAdLoadedListener
 import com.adxcorp.ads.nativeads.position.NativeAdPosition
 import java.util.*
 
-class NativeAdRecyclerViewActivity : BaseActivity(
-    R.layout.activity_native_ad_recyclerview,
-    R.id.content_main
-) {
+class NativeAdRecyclerViewActivity : BaseActivity(R.layout.activity_native_ad_recyclerview) {
     companion object {
         private val TAG = "ADX:" + NativeAdRecyclerViewActivity::class.java.simpleName
     }

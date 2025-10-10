@@ -6,10 +6,7 @@ import android.view.View
 import android.widget.LinearLayout
 import com.adxcorp.ads.nativeads.*
 
-class NativeAdFactoryActivity : BaseActivity(
-    R.layout.activity_native_ad_factory,
-    R.id.content_main
-) {
+class NativeAdFactoryActivity : BaseActivity(R.layout.activity_native_ad_factory) {
 
     companion object {
         private val TAG = "ADX:" + NativeAdFactoryActivity::class.java.simpleName

@@ -6,10 +6,7 @@ import android.widget.Button
 import android.widget.Toast
 import com.adxcorp.ads.RewardedAd
 
-class RewardedAdActivity : BaseActivity(
-    R.layout.activity_fullscreen,
-    R.id.cl_content
-) {
+class RewardedAdActivity : BaseActivity(R.layout.activity_fullscreen) {
     companion object {
         private val TAG = "ADX:" + RewardedAdActivity::class.java.simpleName
     }

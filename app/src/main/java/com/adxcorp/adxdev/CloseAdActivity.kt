@@ -2,6 +2,7 @@ package com.adxcorp.adxdev
 
 import android.os.Bundle
 import android.util.Log
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import com.adxcorp.ads.BannerAd
 import com.adxcorp.ads.common.AdConstants
@@ -17,6 +18,12 @@ class CloseAdActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                mCloseDialog?.show()
+            }
+        })
 
         try {
             if (mBannerAd == null) {
@@ -41,14 +48,6 @@ class CloseAdActivity : AppCompatActivity() {
             }
         } catch (e: Exception) {
             e.printStackTrace()
-        }
-    }
-
-    override fun onBackPressed() {
-        if (mCloseDialog == null) {
-            super.onBackPressed()
-        } else {
-            mCloseDialog!!.show()
         }
     }
 

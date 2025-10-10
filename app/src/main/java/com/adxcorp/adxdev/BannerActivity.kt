@@ -5,10 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 
-class BannerActivity : BaseActivity(
-    R.layout.activity_banner,
-    R.id.cl_banner
-) {
+class BannerActivity : BaseActivity(R.layout.activity_banner) {
     companion object {
         private val TAG = "ADX:" + BannerActivity::class.java.simpleName
     }
